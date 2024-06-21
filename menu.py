@@ -120,7 +120,6 @@ while place_order:
             # 2. Ask customer to input menu item number
             menu_input = input("Please enter the selected menu item's number: ")
 
-
             # 3. Check if the customer typed a number
             if not menu_input.isdigit():
                 print('Please enter a valid number.')
@@ -129,7 +128,6 @@ while place_order:
                 # Convert the menu selection to an integer
             menu_input = int(menu_input) 
 
-
                 # 4. Check if the menu selection is in the menu items
             if menu_input in menu_items:
 
@@ -137,17 +135,14 @@ while place_order:
                     item_name = menu_items[menu_input]['Item name']
                     item_price = menu_items[menu_input]['Price']
 
-
                     # Ask the customer for the quantity of the menu item
                     quantity_input = input(f'How many {item_name} would you like to order? ')
-
 
                     # Check if the quantity is a number, default to 1 if not
                     if not quantity_input.isdigit():
                         quantity = 1
                     else: 
                         quantity = int(quantity_input)
-
 
                     # Add the item name, price, and quantity to the order list
                     order.append({
@@ -193,11 +188,9 @@ while place_order:
                 # Exit the keep ordering question loop
                 break
 
-
                 # Tell the customer to try again
             case _:
                 print("Try again. type 'Y' or 'N'.")
-
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
@@ -227,8 +220,7 @@ for item in order:
 
     # 10. Print the item name, price, and quantity
     print(f"{item_name}{item_spaces} | ${price: .2f}{price_spaces} | {quantity}")
-
-
+    
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
