@@ -213,7 +213,6 @@ for item in order:
     num_item_spaces = 25 - len(item_name)
     num_price_spaces = 5 - len(f'{price: .2f}')
 
-
     # 9. Create space strings
     item_spaces = " " * num_item_spaces
     price_spaces = " " * num_price_spaces
